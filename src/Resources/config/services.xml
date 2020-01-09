@@ -7,11 +7,11 @@
             <argument type="service" id="logger" on-invalid="ignore"/>
         </service>
         <service id="ideasbucket_queue.listener" class="IdeasBucket\QueueBundle\Listener" public="false">
-            <argument>"%ideasbucket_queue.command_path%"</argument>
+            <argument>%ideasbucket_queue.command_path%</argument>
         </service>
         <service id="ideasbucket_queue" class="IdeasBucket\QueueBundle\Manager">
             <argument type="service" id="service_container"/>
-            <argument>"%ideasbucket_queue.configuration%"</argument>
+            <argument>%ideasbucket_queue.configuration%</argument>
             <argument type="service" id="event_dispatcher"/>
             <argument type="service" id="ideasbucket_queue.switch_service"/>
         </service>
