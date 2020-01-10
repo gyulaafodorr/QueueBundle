@@ -9,7 +9,7 @@
             <argument type="service" id="ideasbucket_queue.switch_service"/>
             <argument type="service" id="event_dispatcher"/>
             <argument type="service" id="ideasbucket_queue.cache"/>
-            <argument>"%ideasbucket_queue.configuration%"</argument>
+            <argument>%ideasbucket_queue.configuration%</argument>
             <call method="setFailedJobLogger">
                 <argument on-invalid="ignore" type="service" id="ideasbucket_queue.failed_repository" />
             </call>
@@ -21,7 +21,7 @@
         <service id="ideasbucket_queue.command.listen" class="IdeasBucket\QueueBundle\Command\ListenCommand">
             <tag name="console.command"/>
             <argument type="service" id="ideasbucket_queue.listener"/>
-            <argument>"%ideasbucket_queue.configuration%"</argument>
+            <argument>%ideasbucket_queue.configuration%</argument>
         </service>
         <service id="ideasbucket_queue.command.retry" class="IdeasBucket\QueueBundle\Command\RetryCommand">
             <tag name="console.command"/>
